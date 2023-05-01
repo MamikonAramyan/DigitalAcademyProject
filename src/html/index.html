@@ -1,11 +1,26 @@
 <!DOCTYPE html>
+<!-- <html lang="ru" class="show-event-popup"> -->
 <html lang="ru">
     @@include('blocks/head.html')
 
 <body class="body">
-    @@include('blocks/page-header.html');
-    <main class="page-main"></main>
-    @@include('blocks/page-footer.html');
+    @@include('blocks/page-header.html')
+    
+    <main class="page-main">
+
+        <div class="home">
+            @@include('blocks/promo.html', {"class": "home__promo"})
+            @@include('blocks/block-choice.html', {"class": "home__choice"})
+            @@include('blocks/about-us.html', {"class": "home__about-us"})
+            @@include('blocks/events-slider.html', {"class": "home__events"})
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+            @@include('blocks/contacts.html', {"class": "home__contacts"})
+            @@include('blocks/quote.html', {"class": "home__quote"})
+        </div>
+        
+    </main>
+    @@include('blocks/page-footer.html')
+    @@include('blocks/event-pp.html')
 </body>
 
 </html>

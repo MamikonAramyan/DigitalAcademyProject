@@ -1,0 +1,49 @@
+.subscription {
+    flex-shrink: 0;
+
+    &__title {
+        margin: 0 0 24px 0;
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    &__container {
+        position: relative;
+        height: 49px;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+
+    &__email {
+        box-sizing: border-box;
+        width: 410px;
+        height: 100%;
+        padding: 15px 28px;
+        border: none;
+
+        &::placeholder {
+            color: @gray_signature;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: @black;
+        font-size: 0.875em;
+        line-height: 1.219em;
+        font-weight: 400;
+        color: @white;
+
+        &--w135 {
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+
+        &:hover {
+            background-color: @red_dark;
+            border-color: @red_dark;
+        }
+    }
+}
