@@ -34,6 +34,110 @@
   <main class="page-main">
     <div class="events">
 
+      <!-- <section class="listing events__listing">
+              <h2 class="listing__title section-title">Мероприятия</h2>
+        
+              <div class="listing__events-list">
+                <!-- prettier-ignore -->
+      <!-- <article class="event-card listing__event-card">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+    </picture>
+
+    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+
+    <p class="event-card__description">
+      Это третий альбом группы...
+    </p>
+
+    <time datetime="2022-12-07T18:00" class="event-card__time">
+      07.12.2022 | начало 18.00
+    </time>
+  </a>
+</article><article class="event-card listing__event-card">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <img src="assets/images/events/howstuffworks.jpg" alt="stuff" class="event-card__img" />
+    </picture>
+
+    <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+
+    <p class="event-card__description">
+      Один из самых популярных подкастов в мире...
+    </p>
+
+    <time datetime="2022-12-14T18:30" class="event-card__time">
+      14.12.2022 | начало 18.30
+    </time>
+  </a>
+</article><article class="event-card listing__event-card">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <img src="assets/images/events/sade.jpg" alt="sade" class="event-card__img" />
+    </picture>
+
+    <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+
+    <p class="event-card__description">
+      Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.
+    </p>
+
+    <time datetime="2022-12-16T20:00" class="event-card__time">
+      16.12.2022 | начало 20.00
+    </time>
+  </a>
+</article><article class="event-card listing__event-card">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <img src="assets/images/events/malewicz.jpg" alt="malewicz" class="event-card__img" />
+    </picture>
+
+    <h4 class="event-card__title">Выставка Малевича в Томске</h4>
+
+    <p class="event-card__description">
+      Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.
+    </p>
+
+    <time datetime="2022-12-23T20:00" class="event-card__time">
+      23.12.2022 | начало 20.00
+    </time>
+  </a>
+</article><article class="event-card listing__event-card">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <img src="assets/images/events/tatler.jpg" alt="tatler" class="event-card__img" />
+    </picture>
+
+    <h4 class="event-card__title">Мастер — класс по студийной съемке от Tatler</h4>
+
+    <p class="event-card__description">
+      Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.
+    </p>
+
+    <time datetime="2022-12-15T18:30" class="event-card__time">
+      15.12.2022 | начало 13.00
+    </time>
+  </a>
+</article><article class="event-card listing__event-card">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <img src="assets/images/events/the-hatters.jpg" alt="the-hatters" class="event-card__img" />
+    </picture>
+
+    <h4 class="event-card__title">Повесилимся на славу на концерте The Hatters</h4>
+
+    <p class="event-card__description">
+      Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.
+    </p>
+
+    <time datetime="2022-12-27T10:00" class="event-card__time">
+      27.12.2022 | начало 10.00
+    </time>
+  </a>
+</article>      
+              </div>
+            </section>  -->
       <section class="listing events__listing">
         <h2 class="listing__title section-title">Мероприятия</h2>
         <div class="listing__events-list">
@@ -142,10 +246,10 @@
           </article>
         </div>
 
-        <div class="listing__arrow arrow">
-          <a href="#">
-            Показать еще
-            <div>
+        <div class="listing__nav more-events">
+          <a href="#" class="more-events__link">
+            <p class="more-events__link-text">Показать еще</p>
+            <div class="more-events__link-arrow arrow">
               <svg class="arrow__icon" width="92" height="62">
                 <use xlink:href="assets/icons/symbols.svg#arrow"></use>
               </svg>
@@ -263,6 +367,55 @@
           </tfoot>
         </table>
       </section>
+      <section class="choice events__choice">
+        <h3 class="choice__title">Я хочу:</h3>
+        <div class="choice__buttons">
+          <button class="choice__button btn btn--red">Провести мероприятие</button>
+          <button class="choice__button btn">Стать арендатором</button>
+        </div>
+      </section>
+      <section class="info events__info">
+        <div class="info__cards-listing">
+          <!-- prettier-ignore-->
+          <div class="contact-point info__card-item">
+            <div class="contact-point__image">
+              <svg class="contact-point__icon" width="20" height="20">
+                <use xlink:href="assets/icons/symbols.svg#subtract"></use>
+              </svg>
+            </div>
+            <div class="contact-point__info">
+              <h5 class="contact-point__address">Цены</h5>
+              <p class="contact-point__text">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+            </div>
+          </div>
+          <div class="contact-point info__card-item">
+            <div class="contact-point__image">
+              <svg class="contact-point__icon" width="20" height="20">
+                <use xlink:href="assets/icons/symbols.svg#phone"></use>
+              </svg>
+            </div>
+            <div class="contact-point__info">
+              <h5 class="contact-point__address">Контакты</h5>
+              <p class="contact-point__text">Отдел организации мероприятий
+                <br /> +7 499 350 0730
+                <br /> hi@tagree.ru
+              </p>
+            </div>
+          </div>
+          <div class="contact-point info__card-item">
+            <div class="contact-point__image">
+              <svg class="contact-point__icon" width="20" height="20">
+                <use xlink:href="assets/icons/symbols.svg#handshake"></use>
+              </svg>
+            </div>
+            <div class="contact-point__info">
+              <h5 class="contact-point__address">Преимущество</h5>
+              <p class="contact-point__text">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     </div>
   </main>

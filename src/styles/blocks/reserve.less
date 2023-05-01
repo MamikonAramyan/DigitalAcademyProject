@@ -1,15 +1,17 @@
 .reserve {
-  width: 100%;
-  max-width: 1414px;
-  margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  box-sizing: border-box;
   display: grid;
   gap: 65px 11%;
   grid-template-columns: 405px calc(89% - 405px);
   grid-template-areas:
     "checks scheme"
     "order legend";
+  width: 100%;
+  max-width: 1414px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
 
   &__checks {
     grid-area: checks;

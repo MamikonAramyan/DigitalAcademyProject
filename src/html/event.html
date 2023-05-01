@@ -5,9 +5,20 @@
 <body class="body">
   @@include('blocks/page-header.html')
   <main class="page-main">
+    <!-- Здесь будут хлебные крошки -->
+
     <article class="event">
-       <section class="event__title"></section>
-      
+      <!-- Здесь пропущенное содержимое страницы -->
+      @@include('blocks/event-promo.html', {
+        "class": "event__promo",
+        "title": "Вечер | The Best of Sade",
+        "date": "16/12/2022",
+        "place": "Кафе «Птичка» ",
+        "img": "/assets/images/event-promo/event.jpg",
+        "alt": "Вечер | The Best of Sade",
+        "time": "20.00",
+        "address": "Ленина 10 | 2 этаж",
+      })          
       @@include('blocks/event-content.html', {"class": "event__content"})
 
       <form class="reserve event__reserve">

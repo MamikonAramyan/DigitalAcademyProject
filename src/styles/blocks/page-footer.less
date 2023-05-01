@@ -4,7 +4,29 @@
   align-items: center;
 
   &__container {
+    position: relative;
     .container();
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 43.7%;
+      height: 1px;
+    }
+
+    &::before {
+      left: 40px;
+      background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
+
+    }
+
+    &::after {
+      right: 40px;
+      background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 100%);
+    }
   }
 
   &__main {
