@@ -35,14 +35,15 @@
     <!-- Здесь будут хлебные крошки -->
 
     <article class="event">
+      <h2 class="visually-hidden"></h2>
       <!-- Здесь пропущенное содержимое страницы -->
       <section class="event-promo event__promo">
-        <h1 class="event-promo__title"> Вечер | The Best of Sade</h1>
+        <h1 class="event-promo__title">Вечер | The Best of Sade</h1>
         <div class="event-promo__info-block">
           <div class="event-promo__left">
-            <p class="event-promo__date first-line">
+            <time datetime="datetime" class="event-promo__date first-line">
               16/12/2022
-            </p>
+            </time>
             <p class="event-promo__place second-line">
               Кафе «Птичка»
             </p>
@@ -52,7 +53,7 @@
           </picture>
           <div class="event-promo__right">
             <p class="event-promo__time first-line">
-              20.00 начало
+              <time datetime="16/12/2022time">20.00</time> начало
             </p>
             <p class="event-promo__address second-line">
               Ленина 10 | 2 этаж
@@ -353,11 +354,11 @@
               <div class="reserve__price" data-price="1250" data-currency="₽" data-person="1 персона"></div>
             </div>
           </div>
-          <h5 class="reserve__note-title">Примечание</h4>
-            <div class="reserve__notes-list">
-              <p class="reserve__notes">доступные места</p>
-              <p class="reserve__notes">забронировано</p>
-            </div>
+          <h5 class="reserve__note-title">Примечание</h5>
+          <div class="reserve__notes-list">
+            <p class="reserve__notes">доступные места</p>
+            <p class="reserve__notes">забронировано</p>
+          </div>
         </div>
       </form>
     </article>
@@ -395,10 +396,14 @@
         <a href="#" class="page-footer__cookies">Cookies</a>
         <div class="page-footer__social social">
           <a class="social__instagram">
-
+            <svg class="social__instagram-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#instagram"></use>
+            </svg>
           </a>
           <a class="social__vk">
-
+            <svg class="social__vk-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
+            </svg>
           </a>
         </div>
         <div class="page-footer__logo">

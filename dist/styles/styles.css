@@ -1032,6 +1032,7 @@ textarea:focus::placeholder {
 }
 .social__instagram,
 .social__vk {
+  position: relative;
   display: block;
   width: 58px;
   height: 58px;
@@ -1044,6 +1045,17 @@ textarea:focus::placeholder {
 }
 .social__instagram {
   margin-right: 44px;
+}
+.social__instagram-icon,
+.social__vk-icon {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  z-index: 10;
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
 }
 .info {
   -webkit-box-sizing: border-box;
@@ -1158,10 +1170,10 @@ textarea:focus::placeholder {
 .event-promo__picture {
   position: relative;
   display: block;
-  margin-left: 58px;
-  margin-right: 65px;
   width: 497px;
   height: 532px;
+  margin-left: 58px;
+  margin-right: 65px;
   overflow: hidden;
 }
 .event-promo__picture::after {
@@ -1504,9 +1516,9 @@ textarea:focus::placeholder {
   font-size: 0.95em;
 }
 .reserve__total {
+  margin-bottom: 53px;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 53px;
 }
 .reserve__total::before {
   content: attr(data-caption);

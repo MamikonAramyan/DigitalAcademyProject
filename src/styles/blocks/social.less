@@ -4,6 +4,7 @@
 
     &__instagram,
     &__vk {
+        position: relative;
         display: block;
         width: 58px;
         height: 58px;
@@ -17,5 +18,17 @@
 
     &__instagram {
         margin-right: 44px;
+    }
+        
+    &__instagram-icon,
+    &__vk-icon {
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        z-index: 10;
+        display: block;
+        width: 24px;
+        height: 24px;
+        fill: @white;
     }
 }
