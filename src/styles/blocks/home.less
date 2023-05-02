@@ -12,9 +12,9 @@
   &__events {
     // position: relative;
     z-index: 10;
+    max-width: 100%;
     margin-bottom: 64px;
-    padding-top: 120px;
-    padding-bottom: 264px;
+    padding: 120px 0 264px 0;  
 
     &::before {
       content: "";
@@ -32,9 +32,10 @@
     } 
 
     .listing__events-list {
-      margin: 0;
-      flex-wrap: nowrap;
-      overflow-x: hidden;
+      // margin: 0;
+      // flex-wrap: nowrap;
+      height: 759px;
+      overflow-y: hidden;
     }
   }
   
@@ -43,6 +44,6 @@
   }
 
   &__contacts {
-    margin-bottom: 164px;
+    margin-bottom: 153px;
   }
 }

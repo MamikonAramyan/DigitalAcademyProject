@@ -16,6 +16,9 @@ body {
   margin: 0;
   padding: 0;
 }
+* {
+  outline: 1px solid red;
+}
 .body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -176,6 +179,9 @@ textarea:focus::placeholder {
 .arrow__icon:hover {
   fill: #a51505;
 }
+.link {
+  font-weight: 600;
+}
 .first-line {
   font-family: "mak", serif;
   font-size: 1.875em;
@@ -193,7 +199,6 @@ textarea:focus::placeholder {
   display: flex;
   width: 404px;
   max-width: 100%;
-  min-width: 280px;
 }
 .event-card__link {
   display: -webkit-box;
@@ -365,9 +370,12 @@ textarea:focus::placeholder {
 .article-card__title {
   margin: 0;
   color: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1em;
+}
+.article-card__title:hover {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
 }
 .article-card__description {
   margin: 0;
@@ -377,7 +385,7 @@ textarea:focus::placeholder {
 .article-card__arrow {
   position: absolute;
   right: 0;
-  bottom: 30px;
+  bottom: 22px;
   color: inherit;
   -webkit-transition: none;
   -o-transition: none;
@@ -404,7 +412,7 @@ textarea:focus::placeholder {
   position: absolute;
   display: block;
   width: 100%;
-  bottom: 84px;
+  bottom: 97px;
   z-index: 10;
 }
 .events-navigation__arrow {
@@ -450,6 +458,12 @@ textarea:focus::placeholder {
 .events-navigation__link {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
   display: block;
   padding: 0 40px;
   font-weight: 600;
@@ -635,6 +649,7 @@ textarea:focus::placeholder {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  line-height: 1.3;
 }
 .promo__title--bottom {
   margin-bottom: 100px;
@@ -665,6 +680,7 @@ textarea:focus::placeholder {
 }
 .choice__title {
   margin: 0 0 46px;
+  padding-left: 20px;
   font-family: "Lora", serif;
   font-size: 1.375em;
   font-weight: 400;
@@ -683,7 +699,7 @@ textarea:focus::placeholder {
   padding-bottom: 75px;
 }
 .choice__button {
-  margin: 0 30px 25px;
+  margin: 0 53px 25px;
   min-width: 246px;
 }
 .about-us {
@@ -707,9 +723,9 @@ textarea:focus::placeholder {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: grid;
-  grid-template-columns: calc(96% - 404px) 404px;
+  grid-template-columns: calc(95.5% - 404px) 404px;
   grid-template-rows: auto;
-  gap: 0 4%;
+  gap: 0 4.5%;
   grid-template-areas: "project-title project-title" "project-description project-description" "project-big project-small" "advertising-title project-small" "advertising-description advertising-description" "result-img result-text";
   width: 100%;
 }
@@ -723,6 +739,7 @@ textarea:focus::placeholder {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   grid-area: project-description;
+  margin-top: 0;
   margin-bottom: 100px;
   padding-left: 467px;
   padding-right: 10px;
@@ -739,7 +756,7 @@ textarea:focus::placeholder {
   content: "";
   display: block;
   width: 100%;
-  padding-top: 63.6%;
+  padding-top: 66.6%;
 }
 .about-us__project-big-img {
   position: absolute;
@@ -765,7 +782,7 @@ textarea:focus::placeholder {
 }
 .about-us__project-small-img {
   position: absolute;
-  bottom: 50px;
+  bottom: 65px;
   left: 0;
   display: block;
   width: 100%;
@@ -777,12 +794,14 @@ textarea:focus::placeholder {
   grid-area: advertising-title;
   margin: 0 0 50px 0;
   font-size: 2.75em;
+  line-height: 1.3;
   font-weight: 700;
 }
 .about-us__advertising-description {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   grid-area: advertising-description;
+  margin-top: 0;
   margin-bottom: 110px;
   padding-left: 467px;
   padding-right: 10px;
@@ -792,7 +811,6 @@ textarea:focus::placeholder {
   position: relative;
   grid-area: result-img;
   width: 100%;
-  overflow: hidden;
 }
 .about-us__result-img::before {
   content: "";
@@ -809,15 +827,15 @@ textarea:focus::placeholder {
   content: "";
   display: block;
   width: 100%;
-  padding-top: 41.5%;
+  padding-top: 43.5%;
 }
 .about-us__project-bottom-img {
   position: absolute;
-  bottom: 0;
-  right: 9px;
+  top: 22px;
+  left: 50px;
   z-index: 10;
   display: block;
-  width: 93%;
+  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -829,7 +847,8 @@ textarea:focus::placeholder {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 151px;
+  padding-top: 158px;
+  padding-left: 60px;
 }
 .about-us__result-description {
   margin: 0 0 89px 0;
@@ -839,10 +858,16 @@ textarea:focus::placeholder {
   font-weight: 600;
   text-decoration: none;
 }
+.about-us__result-link-text {
+  margin-bottom: 0;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
 .about-us__result-arrow {
   position: absolute;
   bottom: 0;
   right: 0;
+  height: 60px;
 }
 .listing {
   position: relative;
@@ -860,6 +885,18 @@ textarea:focus::placeholder {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+  /*на главной странице не используется*/
+}
+.listing__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 10;
 }
 .listing__title {
   z-index: 10;
@@ -874,11 +911,15 @@ textarea:focus::placeholder {
   z-index: 10;
 }
 .listing__event-card {
-  width: calc(33.3333% - 60px);
   margin: 0 30px 120px;
 }
 .listing__nav {
   left: 0;
+}
+.listing__link {
+  padding-top: 87px;
+  text-align: right;
+  text-decoration: none;
 }
 .contacts {
   -webkit-box-sizing: border-box;
@@ -909,9 +950,11 @@ textarea:focus::placeholder {
 }
 .contacts__contact-card {
   width: 100%;
+  padding-top: 14px;
+  padding-left: 4px;
 }
 .contacts__contact-card + .contacts__contact-card {
-  margin-top: 64px;
+  margin-top: 53px;
 }
 .contacts__map {
   -ms-flex-negative: 0;
@@ -934,7 +977,7 @@ textarea:focus::placeholder {
   content: "";
   display: block;
   width: 100%;
-  padding-top: 62.3126%;
+  padding-top: 65.3126%;
 }
 .contacts__map-img {
   position: absolute;
@@ -962,7 +1005,7 @@ textarea:focus::placeholder {
   font-family: "mak", serif;
   font-weight: 700;
   font-size: 8em;
-  line-height: 120%;
+  line-height: 118%;
   text-align: right;
 }
 .quote__text::first-line {
@@ -974,6 +1017,7 @@ textarea:focus::placeholder {
 }
 .subscription__title {
   margin: 0 0 24px 0;
+  padding-left: 7px;
   font-size: 1em;
   font-weight: 600;
 }
@@ -1025,10 +1069,12 @@ textarea:focus::placeholder {
   border-color: #a51505;
 }
 .social {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 80px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
 }
 .social__instagram,
 .social__vk {
@@ -1597,9 +1643,9 @@ textarea:focus::placeholder {
 }
 .home__events {
   z-index: 10;
+  max-width: 100%;
   margin-bottom: 64px;
-  padding-top: 120px;
-  padding-bottom: 264px;
+  padding: 120px 0 264px 0;
 }
 .home__events::before {
   content: "";
@@ -1616,16 +1662,14 @@ textarea:focus::placeholder {
   background-position-x: 50%;
 }
 .home__events .listing__events-list {
-  margin: 0;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow-x: hidden;
+  height: 759px;
+  overflow-y: hidden;
 }
 .home__listing {
   margin-bottom: 95px;
 }
 .home__contacts {
-  margin-bottom: 164px;
+  margin-bottom: 153px;
 }
 .pp {
   position: fixed;
@@ -1948,6 +1992,7 @@ textarea:focus::placeholder {
 .check__label--fs14 {
   font-weight: 300;
   font-size: 0.875em;
+  letter-spacing: -0.3px;
 }
 .check--red {
   color: #bc3324;
@@ -2223,11 +2268,15 @@ textarea:focus::placeholder {
   color: #a51505;
 }
 .page-footer__bottom-block {
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -2241,7 +2290,6 @@ textarea:focus::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 60px;
 }
 .page-footer__copyright {
   margin-bottom: 20px;
@@ -2249,22 +2297,31 @@ textarea:focus::placeholder {
 .page-footer__copyright-link {
   text-decoration: none;
 }
+.page-footer__terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .page-footer__privacy,
 .page-footer__cookies,
 .page-footer__logo-text {
   font-weight: 600;
   text-decoration: none;
 }
+.page-footer__privacy {
+  margin-right: 60px;
+}
 .page-footer__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .page-footer__logo-text {
   margin-right: 15px;
+  line-height: 1.5rem;
 }
 .display-none {
   display: none;

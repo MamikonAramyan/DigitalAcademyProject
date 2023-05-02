@@ -1,29 +1,30 @@
 <section class="listing @@class">
-    <h2 class="listing__title section-title">Мероприятия</h2>
-    @@include('events-list.html')
-    
-    <div class="listing__nav events-navigation">
-        <div class="events-navigation__arrow">
-            <div class="events-navigation__left arrow">
-                <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
+    <div class="listing__container">
+        <h2 class="listing__title section-title">Мероприятия</h2>
+        @@include('events-list.html')
+        
+        <div class="listing__nav events-navigation">
+            <div class="events-navigation__arrow">
+                <div class="events-navigation__left arrow">
+                    <svg class="arrow__icon" width="91" height="60">
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                </div>
+        
+                <div class="events-navigation__point"></div>
+                <div class="events-navigation__point"></div>
+                <div class="events-navigation__point"></div>
+                <div class="events-navigation__point"></div>
+                <div class="events-navigation__point"></div>
+        
+                <div class="events-navigation__right arrow">
+                    <svg class="arrow__icon" width="92" height="62">
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                </div>
             </div>
     
-            <div class="events-navigation__point"></div>
-            <div class="events-navigation__point"></div>
-            <div class="events-navigation__point"></div>
-            <div class="events-navigation__point"></div>
-            <div class="events-navigation__point"></div>
-    
-            <div class="events-navigation__right arrow">
-                <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
-            </div>
+            <a href="#" class="events-navigation__link">Смотреть все</a>
         </div>
-
-        <a href="#" class="events-navigation__link">Смотреть все</a>
     </div>
-
 </section>

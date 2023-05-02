@@ -74,8 +74,10 @@
   }
 
   &__bottom-block {
+    position: relative;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 73px;
   }
@@ -83,7 +85,6 @@
   &__left-block {
     display: flex;
     flex-direction: column;
-    margin-right: 60px;
   }
 
   &__copyright{
@@ -94,6 +95,10 @@
     text-decoration: none;
   }
 
+  &__terms {
+    display: flex;
+  }
+
   &__privacy,
   &__cookies,
   &__logo-text {
@@ -101,12 +106,17 @@
     text-decoration: none;
   }
 
+  &__privacy {
+    margin-right: 60px;
+  }
+
   &__logo {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
   }
 
   &__logo-text {
     margin-right: 15px;
+    line-height: 1.5rem;
   }
 }

@@ -9,6 +9,11 @@
   padding-left: 40px;
   padding-right: 40px;
 
+  &__container{
+    .container();
+    z-index: 10;
+  }
+
   &__title {
     z-index: 10;
   }
@@ -21,11 +26,18 @@
   }
 
   &__event-card {
-    width: calc(33.3333% - 60px);
+    // width: calc(33.3333% - 60px);
     margin: 0 30px 120px;
   }
 
+  /*на главной странице не используется*/
   &__nav {
     left: 0;
+  }
+
+  &__link {
+    padding-top: 87px;
+    text-align: right;
+    text-decoration: none;
   }
 }
