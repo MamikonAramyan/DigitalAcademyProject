@@ -1,7 +1,7 @@
 .btn {
-    display: inline-block;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    display: inline-block;
     padding: 15px 40px;
     border: 1px solid @black;
     overflow: hidden;
@@ -19,6 +19,16 @@
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
     cursor: pointer;
+
+    @media @bw1660 {
+        padding: 15px 39px; // если помешает - перенести в choice
+    }
+
+    @media @bw768 {
+        padding: 14px 39px; // choice
+        font-size: 0.875rem;
+        line-height: 1.36;
+    }
 
     &:hover {
         @media (hover: hover) {

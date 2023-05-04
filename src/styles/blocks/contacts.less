@@ -9,30 +9,102 @@
     padding-right: 40px;
     overflow-x: hidden;
 
+    @media @bw1340 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media @bw768 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     &__contact-list {
         box-sizing: border-box;
         display: flex;
         width: 100%;
+
+        @media @bw1340 {
+            flex-direction: column-reverse;
+        }
     }
 
     &__contact-address {
+        padding-top: 15px;
         overflow: hidden;
+
+        @media @bw1660 {
+            padding-top: 30px;
+            padding-bottom: 29px;
+        }
+
+        @media @bw1340 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 29px 0 34px;
+        }
+
+        @media @bw768 {
+            flex-direction: column;
+            padding: 0;
+        }
     }
 
     &__contact-card {
         width: 100%;
-        padding-top: 14px;
+        // padding-top: 14px;
         padding-left: 4px;
 
+        @media @bw1660 {
+            // padding-top: 30px;
+            padding-left: 0;
+        }
+
+        @media @bw1340 {
+            max-width: 195px;
+            padding-top: 0;
+        }
+
+        @media @bw768 {
+            flex-direction: row;
+            max-width: 350px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
         &+.contacts__contact-card {
-            margin-top: 53px;
+            margin-top: 67px;
+
+            @media @bw1660 {
+                margin-top: 52px;
+            }
+
+            @media @bw1340 {
+                margin-top: 0;
+            }
+
+            @media @bw768 {
+                margin-top: 42px;
+            }
         }
     }
 
     &__map {
         flex-shrink: 0;
         width: 752px;
-        margin-left: 178px;
+        // margin-left: 178px;
+        margin-left: auto;
+
+        @media @bw1340 {
+            width: 100%;
+            margin: 0 0 100px;
+        }
+
+        @media @bw768 {
+            margin: 0 0 60px;
+        }
     }
 
     &__map-picture {
@@ -47,6 +119,10 @@
             display: block;
             width: 100%;
             padding-top: 65.3126%;
+
+            @media @bw768 {
+                padding-top: 66.3126%;
+            }
         }
     }
 

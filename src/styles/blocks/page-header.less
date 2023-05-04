@@ -24,6 +24,10 @@
     display: flex;
     align-items: center;
     z-index: 1;
+
+    @media @bw768 {
+      padding-left: 0px!important;
+    }
   }
 
   // @supports (backdrop-filter: blur(20px)) {
@@ -88,6 +92,7 @@
     margin: 0 auto;
 
     @media @bw1020 {
+      display: none;
       position: absolute;
       left: 0;
       top: 0;
@@ -241,6 +246,7 @@
       background: none;
       color: @black;
       font-size: 0;
+      line-height: 9px;
     }
 
     &:hover {
@@ -265,15 +271,16 @@
       display: block;
       position: relative;
       right: -11px;
-      margin-left: 18px;
-      width: 40px;
-      height: 40px;
+      margin-left: 20px;
+      width: 43px;
+      height: 41px;
       border: none;
       background: none;
     }
 
     @media @bw768 {
-      margin-left: 5px;
+      margin-left: 3px;
+      right: -13px;
     }
 
     &::before,
@@ -288,6 +295,11 @@
       border-radius: 2px;
       background-color: @black;
       transform-origin: 50% 50%;
+
+      @media @bw768 {
+        left: 8px;
+        width: 20px;
+      }
     }
 
     &::before {
@@ -305,6 +317,9 @@
 
     @media @bw1020 {
       display: block;
+      width: 23px;
+      height: 23px;
+      margin: auto;
     }
   }
 

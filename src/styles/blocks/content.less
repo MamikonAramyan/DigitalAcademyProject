@@ -6,11 +6,17 @@
   // padding-right: 40px;
   color: @black;
   font-family: @font1;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   font-style: normal;
   line-height: 1.375;
   word-wrap: break-word;
+
+  @media @bw768 {
+    font-size: 0.875rem;
+    line-height: 1.357;
+    // line-height: 2;
+  }
 
   h1,
   h2,
@@ -25,6 +31,13 @@
 
     &:first-child {
       margin-top: 0;
+      margin-left: -5px;
+      letter-spacing: 0.5px;
+
+      @media @bw768 {
+        margin-left: 0;
+        letter-spacing: 0;
+      }
     }
 
     &:last-child {
@@ -50,6 +63,12 @@
 
   h5 {
     font-size: 18px;
+
+    @media @bw768 {
+      font-size: 1rem;
+      line-height: 1.357;
+      font-weight: 700;
+    }
   }
 
   h6 {
@@ -71,6 +90,34 @@
     }
   }
 
+  h5 + p {
+    margin: 17px 0 22px;
+
+    @media @bw1340 {
+      margin: 15px 0 22px;
+    }
+
+    @media @bw768 {
+      margin: 15px 0 17px;
+    }
+  }
+
+  p {
+    @media @bw1340 {
+      margin: 16px 0;
+    }
+  }
+
+  p + p {
+    @media @bw1340 {
+      margin: 20px 0;
+    }
+
+    @media @bw768 {
+      margin: 19px 0;
+    }
+  }
+
   ul,
   ol {
     position: relative;
@@ -85,26 +132,44 @@
     padding-left: 15px;
     line-height: 2;
 
+    @media @bw768 {
+      padding-left: 8px;
+    }
+
     &::before {
       content: "";
       position: absolute;
       top: 15px;
       left: 0;
       display: block;
-      width: 6px;
-      height: 6px;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background-color: @red;
       pointer-events: none;
+
+      @media @bw768 {
+        top: 13px;
+        width: 3px;
+        height: 3px;
+      }
     }
   }
 
   ul:last-of-type {
     margin-bottom: 75px;
+
+    @media @bw1340 {
+      margin-bottom: 55px;
+    }
   }
 
   p:last-of-type {
     margin-bottom: 50px;
+
+    @media @bw1340 {
+      margin-bottom: 40px;
+    }
   }
 
   ol {
@@ -116,6 +181,11 @@
     margin: 0 0 10px;
     padding-left: 5px;
     counter-increment: li;
+
+    @media @bw768 {
+      margin: 0 0 5px;
+      line-height: 19px;
+    }
 
     &::before {
       content: counter(li) + ". ";

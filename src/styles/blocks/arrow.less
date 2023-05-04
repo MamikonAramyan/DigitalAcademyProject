@@ -1,7 +1,16 @@
 .arrow {
     &__icon {
         display: block;
-        height: 60px;
+        height: 61px;
+
+        @media @bw1340 {
+            width: 68px;
+            height: 43px;
+        }
+
+        @media @bw768 {
+            width: 62px;
+        }
     }
 
     &:disabled {

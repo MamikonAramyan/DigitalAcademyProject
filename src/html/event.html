@@ -6,7 +6,7 @@
   @@include('blocks/page-header.html')
   <main class="page-main">
     <!-- Здесь будут хлебные крошки -->
-    <div class="breadcrumbs">
+    <div class="breadcrumbs breadcrumbs--product-page">
       <a href="./index.html" class="breadcrumbs__item">Главная</a>
       <a href="./events.html" class="breadcrumbs__item">Мероприятия</a>
       <a class="breadcrumbs__item breadcrumbs__item--last">Вечер | The Best of Sade</a>
@@ -28,8 +28,8 @@
       @@include('blocks/event-content.html', {"class": "event__content"})
 
       <form class="reserve event__reserve">
-        <div class="reserve__checks">
-          <h4 class="reserve__section-title">Забронировать столик</h4>
+        <div class="reserve__checks reserve__checks--wrapper">
+          <h4 class="reserve__section-title reserve__section-title--bw768">Забронировать столик</h4>
           <label class="reserve__checks check check--red">
             <input type="checkbox" name="table_1" class="check__input">
             <span class="check__mark"></span>
@@ -292,11 +292,11 @@
           <h4 class="reserve__section-title reserve__section-title--mb">Ваши пригласительные билеты</h4>
           <div class="reserve__tickets-list">
             <div class="reserve__tickets">
-              <div class="reserve__qty" data-caption=" шт." data-price="1400">9</div>
+              <div class="reserve__qty" data-caption=" шт." data-price="1400" data-currency=" ₽">9</div>
               <div class="reserve__sum" data-currency=" ₽">12 600</div>
             </div>
             <div class="reserve__tickets">
-              <div class="reserve__qty" data-caption=" шт." data-price="1250">4</div>
+              <div class="reserve__qty" data-caption=" шт." data-price="1250" data-currency=" ₽">4</div>
               <div class="reserve__sum" data-currency=" ₽">5000</div>
             </div>
           </div>

@@ -1,16 +1,21 @@
 .info {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1414px;
-    margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    .container();
+    // display: flex;
+    // flex-direction: column;
 
     &__cards-listing {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media @bw1340 {
+            justify-content: space-around;
+            margin: 0 -27px -50px;
+        }
+
+        @media @bw768 {
+            margin: 0 0 -40px;
+        }
     }
 
     &__card-item {
@@ -18,16 +23,58 @@
         max-width: 401px;
         text-align: center;
 
+        @media @bw1340 {
+            max-width: 280px;
+            width: calc(50%-54px);
+            margin: 0 27px 50px;
+        }
+
+        @media @bw768 {
+            margin: 0 0 40px;
+        }
+
+        &:last-child .contact-point__text {
+            padding: 0 10px;
+        }
+
         .contact-point__image {
             margin: 0 auto 40px auto;
+
+            @media @bw768 {
+                margin-bottom: 31px;
+            }
         }
 
         .contact-point__info {
             padding: 0;
+
+            @media @bw768 {
+                text-align: center;
+            }
         }
     }
 
-    & .contact-point__text{
-        line-height: 1.4;
+    & .contact-point__address {
+        @media @bw1340 {
+            margin: 0 0 16px;
+        }
+
+        @media @bw768 {
+            margin: 0 0 10px;
+        }
+    }
+
+    & .contact-point__text {
+        line-height: 1.357;
+
+        @media @bw1340 {
+            font-size: 0.875rem;
+        }
+
+        @media @bw768 {
+            padding: 0 28px;
+            font-size: 0.8125rem;
+            line-height: 1.38;
+        }
     }
 }

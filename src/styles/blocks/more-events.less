@@ -12,6 +12,12 @@
         text-decoration: none;
         transition: color 0.2s;
 
+        @media @bw1340 {
+            max-width: 99px;
+            min-height: 106px;
+            font-size: 0.875rem;
+        }
+
         &:hover {
             @media (hover: hover) {
                 color: @red_dark;
@@ -31,5 +37,9 @@
         height: 63px;
         margin-top: 36px;
         transform: rotate(90deg);
+
+        @media @bw1340 {
+            margin-top: 32px;
+        }
     }
 }
