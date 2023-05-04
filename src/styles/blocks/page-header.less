@@ -288,7 +288,7 @@
       content: "";
       display: block;
       position: absolute;
-      top: 19px;
+      // top: 19px;
       left: 11px;
       width: 18px;
       height: 2px;
@@ -338,11 +338,26 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+
+    transition: color 0.2s;
+
+    &:hover {
+      @media (hover: hover) {
+        color: @red;
+      }
+    }
   }
 
   &__nav-logout {
     width: 24px;
     height: 24px;
     font-size: 0;
+    transition: color 0.2s;
+
+    &:hover {
+      @media (hover: hover) {
+        color: @red;
+      }
+    }
   }
 }

@@ -73,7 +73,7 @@
         box-sizing: border-box;
         display: block;
         margin: 0;
-        line-height: 1.5;
+        line-height: 1.37;
         text-decoration: none;
         letter-spacing: 0.1px;
         cursor: pointer;
@@ -96,6 +96,14 @@
 
         &:active {
             color: @red_dark;
+        }
+
+        &+.contact-point__text {
+            margin-top: 3px;
+
+            @media @bw768 {
+                margin-top: 0;
+            }
         }
     }
 }

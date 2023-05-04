@@ -11,7 +11,10 @@
         </div>
 
         <picture class="event-promo__picture">
-            <img src="@@img" alt="@@alt" class="event-promo__img">
+            <source type="image/webp" media="(max-width: 1019px)" srcset="@@img-tablet-webp 1x, @@img-tablet-webp-2x 2x">
+            <source type="image/jpeg" media="(max-width: 1019px)" srcset="@@img-tablet 1x, @@img-tablet-2x 2x">
+            <source type="image/webp" srcset="@@img-webp 1x, @@img-webp-2x 2x">
+            <img src="@@img" srcset="@@img-2x 2x" alt="@@alt" class="event-promo__img">
         </picture>
 
         <div class="event-promo__right">
