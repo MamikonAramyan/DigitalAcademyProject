@@ -11,10 +11,8 @@
   height: 100vh;
   min-width: 1200px;
   padding: 90px 95px 50px;
-  overflow-y: auto;
   background-color: fade(@black, 40%);
-
-  // display: block;
+  overflow-y: auto;
 
   @supports (backdrop-filter: blur(50px)) {
     & {
@@ -32,7 +30,7 @@
     max-width: 1210px;
     margin: auto;
     background-color: @gray;
-    // background-image: url(../assets/images/noise.png);
+    background-image: url(../assets/images/noise.png);
     background-position: 0 0;
     background-size: auto;
     background-repeat: repeat;
@@ -47,7 +45,7 @@
   }
 
   &__sticky-close {
-    position: sticky;
+    position: relative;
     top: 0;
     align-self: flex-end;
     width: 0;
@@ -57,14 +55,24 @@
   &__x-btn {
     position: absolute;
     top: -30px;
-    right: -30px;
+    right: -31px;
+
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+
+    &:active {
+      cursor: pointer;
+    }
   }
 
   &__title {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    margin: -40px 0 70px -85px;
+    margin: -44px 0 70px -81px;
     padding: 10px 85px;
     width: 595px;
     min-height: 80px;

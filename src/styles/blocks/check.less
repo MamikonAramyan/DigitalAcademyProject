@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: flex-start;
     min-height: 24px;
-    padding-top: 2px;
+    padding-top: 3px;
     padding-left: 24px;
     color: @black;
     cursor: pointer;
@@ -30,7 +30,8 @@
                     transform: rotate(45deg);
                 }
             }
-    }}
+        }
+    }
 
     &__mark {
         position: absolute;
@@ -46,10 +47,11 @@
     &__label {
         margin-left: 15px;
         font-weight: 300;
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 0.875rem;
+        line-height: 1.35;
 
         &--s {
+            font-weight: 400;
             font-size: 14px;
             line-height: 19px;
         }
@@ -60,22 +62,27 @@
             letter-spacing: -0.3px;
         }
     }
+
     &--red {
         color: @red;
+
         .check__mark {
             border-color: @red;
         }
-        .check__input{
-            &:checked{
-                & ~ .check__mark{
+
+        .check__input {
+            &:checked {
+                &~.check__mark {
                     background-color: @red;
                 }
-                & ~ .check__label{
+
+                &~.check__label {
                     color: @red;
                 }
             }
         }
     }
+
     &--disabled {
         pointer-events: none;
         opacity: 0.5;

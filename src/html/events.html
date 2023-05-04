@@ -5,6 +5,10 @@
 <body class="body">
   @@include('blocks/page-header.html')
     <main class="page-main">
+        <div class="breadcrumbs">
+          <a href="./index.html" class="breadcrumbs__item">Главная</a>
+          <a class="breadcrumbs__item breadcrumbs__item--last">Мероприятия</a>
+        </div>
         <div class="events">
             @@include('blocks/events-listing.html', {"class": "events__listing"})
             @@include('blocks/tariffs-table.html', {"class": "events__tariffs"})
@@ -12,7 +16,7 @@
             @@include('blocks/info.html', {"class": "events__info"})       
           </div>
     </main>
-  @@include('blocks/page-footer.html')
+  @@include('blocks/page-footer.html', {"class": ""})
   @@include('blocks/event-pp.html')
 </body>
 

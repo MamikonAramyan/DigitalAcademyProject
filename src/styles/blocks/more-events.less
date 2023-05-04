@@ -1,29 +1,35 @@
 .more-events {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
+    z-index: 20;
 
     &__link {
-        position: relative;
-        display: block;
+        display: flex;
+        flex-direction: column;
         max-width: 128px;
+        min-height: 132px;
         margin: 0 auto;
-        padding-bottom: 78px;
-        text-decoration: none;
-    }
-
-    &__link-text {
-        margin: 0 0 18px 0;
         font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red_dark;
+                cursor: pointer;
+            }
+        }
+
+        &:active {
+            color: @red_dark;
+            cursor: pointer;
+        }
     }
 
-    &__link-arrow{
-        position: absolute;
-        left: 10px;
-        bottom: 11px;
-        display: block;
+    &__arrow {
+        align-self: center;
+        width: 92px;
+        height: 63px;
+        margin-top: 36px;
         transform: rotate(90deg);
     }
 }

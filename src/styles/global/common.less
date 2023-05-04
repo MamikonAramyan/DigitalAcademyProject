@@ -5,9 +5,11 @@ body {
     padding: 0;
 }
 
-* {
-    outline: 1px solid red;
-}
+// Стили для разработки, удалить после готовности проекта
+// * {
+//     box-sizing: border-box;
+//     outline: 1px solid red;
+// }
 
 .body {
     box-sizing: border-box;
@@ -17,6 +19,13 @@ body {
     padding-top: 147px;
     overflow-x: hidden;
     background-color: @gray;
+
+    // background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
+    background-image: url(../assets/images/noise.png);
+    background-position: 0 0, 0 0;
+    background-size: auto, 100% auto;
+    background-repeat: repeat, repeat-y;
+
     color: @black;
     font-family: @font1;
     font-size: @font1_size;
@@ -24,11 +33,13 @@ body {
     font-style: normal;
     line-height: 1.375;
 
-    // background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
-    // background-position: 0 0, 0 0;
-    // background-size: auto, 100% auto;
-    // background-repeat: repeat, repeat-y;
+    @media @bw1660 {
+      padding-top: 111px;
+    }
 
+    @media @bw768 {
+      padding-top: 70px;
+    }
 }
 
 a {

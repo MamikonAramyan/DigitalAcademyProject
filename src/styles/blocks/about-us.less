@@ -1,5 +1,4 @@
 .about-us {
-    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -83,7 +82,7 @@
 
     &__project-small-img {
         position: absolute;
-        bottom: 65px;
+        bottom: 63px;
         left: 0;
         display: block;
         width: 100%;
@@ -106,7 +105,8 @@
         margin-bottom: 110px;
         padding-left: 467px;
         padding-right: 10px;
-        font-size: 1.125em;
+        font-size: 1.125rem;
+        line-height: 1.4;
     }
 
     &__result-img {
@@ -118,12 +118,12 @@
         &::before {
             content: "";
             position: absolute;
-            z-index: 1;
             top: 0;
             left: 0;
+            z-index: 1;
             display: block;
             width: 930px;
-            height: 246px;
+            height: 65%;
             background-color: @red;
         }
 
@@ -135,7 +135,7 @@
         }
     }
 
-    &__project-bottom-img {
+    &__project-img {
         position: absolute;
         top: 22px;
         left: 50px;
@@ -147,12 +147,9 @@
     }
 
     &__result-text {
-        grid-area: result-text;
-    }
-
-    &__result-text {
         position: relative;
-        box-sizing: border-box;
+        // box-sizing: border-box;
+        grid-area: result-text;
         padding-top: 158px;
         padding-left: 60px;
     }
@@ -162,20 +159,26 @@
         font-size: 1.125em;
     }
 
-    &__result-link {
+    &__result {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
         font-weight: 600;
         text-decoration: none;
-    }
-    &__result-link-text {
-        margin-bottom: 0;
-        padding-top: 19px;
-        padding-bottom: 19px;
+        transition: color 0.2s;
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red_dark;
+            }
+        }
+        
+        &:active {
+            color: @red_dark;
+        }
     }
 
-    &__result-arrow {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        height: 60px;
+    &__arrow {
+        margin-left: auto;
     }
 }

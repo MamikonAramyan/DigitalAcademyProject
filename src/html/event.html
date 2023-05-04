@@ -6,86 +6,91 @@
   @@include('blocks/page-header.html')
   <main class="page-main">
     <!-- Здесь будут хлебные крошки -->
-
+    <div class="breadcrumbs">
+      <a href="./index.html" class="breadcrumbs__item">Главная</a>
+      <a href="./events.html" class="breadcrumbs__item">Мероприятия</a>
+      <a class="breadcrumbs__item breadcrumbs__item--last">Вечер | The Best of Sade</a>
+    </div>
     <article class="event">
-      <h2 class="visually-hidden"></h2>
+      <h1 class="event__title is-hidden">Страница мероприятия</h1>
       <!-- Здесь пропущенное содержимое страницы -->
       @@include('blocks/event-promo.html', {
-        "class": "event__promo",
-        "title": "Вечер | The Best of Sade",
-        "date": "16/12/2022",
-        "place": "Кафе «Птичка» ",
-        "img": "/assets/images/event-promo/event.jpg",
-        "alt": "Вечер | The Best of Sade",
-        "time": "20.00",
-        "address": "Ленина 10 | 2 этаж",
-      })          
+      "class": "event__promo",
+      "title": "Вечер | The Best of Sade",
+      "datetime": "2022-12-16T20:00",
+      "date": "16/12/2022",
+      "place": "Кафе «Птичка»",
+      "img": "/assets/images/event-promo/event.jpg",
+      "alt": "Вечер | The Best of Sade",
+      "time": "20.00",
+      "address": "Ленина 10 | 2 этаж",
+      })
       @@include('blocks/event-content.html', {"class": "event__content"})
 
       <form class="reserve event__reserve">
         <div class="reserve__checks">
           <h4 class="reserve__section-title">Забронировать столик</h4>
           <label class="reserve__checks check check--red">
-            <input type="checkbox" name="table_1" class="check__input" />
+            <input type="checkbox" name="table_1" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">1 стол</span>
           </label>
           <label class="reserve__checks check">
-            <input type="checkbox" name="table_2" class="check__input" />
+            <input type="checkbox" name="table_2" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">2 стол</span>
           </label>
           <label class="reserve__checks check">
-            <input type="checkbox" name="table_3" class="check__input" />
+            <input type="checkbox" name="table_3" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">3 стол</span>
           </label>
           <label class="reserve__checks check">
-            <input type="checkbox" name="table_4" class="check__input" />
+            <input type="checkbox" name="table_4" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">4 стол</span>
           </label>
           <label class="reserve__checks check check--disabled">
-            <input type="checkbox" name="table_5" class="check__input" />
+            <input type="checkbox" name="table_5" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">5 стол</span>
           </label>
           <label class="reserve__checks check">
-            <input type="checkbox" name="table_6" class="check__input" />
+            <input type="checkbox" name="table_6" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">6 стол</span>
           </label>
           <label class="reserve__checks check check--red">
-            <input type="checkbox" name="table_7" class="check__input" />
+            <input type="checkbox" name="table_7" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">7 стол</span>
           </label>
           <label class="reserve__checks check check--red">
-            <input type="checkbox" name="table_8" class="check__input" />
+            <input type="checkbox" name="table_8" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">8 стол</span>
           </label>
           <label class="reserve__checks check check--red">
-            <input type="checkbox" name="table_9" class="check__input" />
+            <input type="checkbox" name="table_9" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">9 стол</span>
           </label>
           <label class="reserve__checks check">
-            <input type="checkbox" name="table_10" class="check__input" />
+            <input type="checkbox" name="table_10" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">10 стол</span>
           </label>
           <label class="reserve__checks check">
-            <input type="checkbox" name="table_11" class="check__input" />
+            <input type="checkbox" name="table_11" class="check__input">
             <span class="check__mark"></span>
             <span class="check__label">11 стол</span>
           </label>
         </div>
         <div class="reserve__scheme">
-          <div class="reverse__scheme-container">
-            <h4 class="reverse__scheme-title">Сцена</h4>
-            <div class="reverse__scheme-wrapper">
-              <svg class="scene" width="780" height="399" viewBox="0 0 780 399" fill="none"
+          <div class="reserve__scheme-container">
+            <h4 class="reserve__scheme-title">Сцена</h4>
+            <div class="reserve__scheme-wrapper">
+              <svg class="reserve__scene scene" width="780" height="399" viewBox="0 0 780 399" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g class="scene__dance-floor">
                   <path
@@ -281,43 +286,43 @@
 
             </div>
           </div>
-          Схема столов
+          <!-- Схема столов -->
         </div>
         <div class="reserve__order">
-          <h4 class="reserve__section-title">Ваши пригласительные билеты</h4>
+          <h4 class="reserve__section-title reserve__section-title--mb">Ваши пригласительные билеты</h4>
           <div class="reserve__tickets-list">
             <div class="reserve__tickets">
-              <div class="reserve__qty" data-caption=" шт." data-price="1400">0</div>
-              <div class="reserve__sum" data-currency=" ₽"></div>
+              <div class="reserve__qty" data-caption=" шт." data-price="1400">9</div>
+              <div class="reserve__sum" data-currency=" ₽">12 600</div>
             </div>
             <div class="reserve__tickets">
-              <div class="reserve__qty" data-caption=" шт." data-price="1250">0</div>
-              <div class="reserve__sum" data-currency=" ₽"></div>
+              <div class="reserve__qty" data-caption=" шт." data-price="1250">4</div>
+              <div class="reserve__sum" data-currency=" ₽">5000</div>
             </div>
           </div>
-          <div class="reserve__total" data-caption="Сумма" data-currency="₽">0</div>
+          <div class="reserve__total" data-caption="Сумма" data-currency="₽">17 600</div>
           <button type="submit" class="btn btn--red reserve__submit">Купить билеты</button>
         </div>
         <div class="reserve__legend reserve__legend--right">
-          <h4 class="reserve__section-title">Стоимость пригласительного билета</h4>
+          <h4 class="reserve__section-title reserve__section-title--mb">Стоимость пригласительного билета</h4>
           <div class="reserve__legend-list">
             <div class="reserve__legends">
               <div class="reserve__price" data-price="1400" data-currency="₽" data-person="1 персона"></div>
             </div>
             <div class="reserve__legends">
-              <div class="reserve__price" data-price="1250" data-currency="₽" data-person="1 персона"></div>
+              <div class="reserve__price reserve__price--black" data-price="1250" data-currency="₽" data-person="1 персона"></div>
             </div>
           </div>
-          <h5 class="reserve__note-title">Примечание</h5>
-            <div class="reserve__notes-list">
-              <p class="reserve__notes">доступные места</p>
-              <p class="reserve__notes">забронировано</p>
-            </div>
+          <h5 class="reserve__section-title reserve__section-title--mb">Примечание</h5>
+          <div class="reserve__notes-list">
+            <p class="reserve__notes">доступные места</p>
+            <p class="reserve__notes reserve__notes--booked">забронировано</p>
+          </div>
         </div>
       </form>
     </article>
   </main>
-  @@include('blocks/page-footer.html')
+  @@include('blocks/page-footer.html', {"class": "page-event"})
 </body>
 
 </html>

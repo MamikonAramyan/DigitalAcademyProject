@@ -11,27 +11,29 @@
 
     &__title {
         margin: 0 0 80px;
+        padding-left: 20px;
         font-family: @font2;
-        font-size: 4.375em;
+        font-size: 4.375rem;
         font-weight: 500;
+        line-height: 1.28;
         text-align: center;
     }
 
     &__info-block {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 497px 1fr;
+        gap: 60px;
     }
 
-    &__left, 
+    &__left,
     &__right {
         position: relative;
-        margin-top: auto;
-        margin-bottom: auto;
+        box-sizing: border-box;
+        align-self: center;
         padding: 12px 0;
     }
 
     &__left {
-        margin-left: auto;
 
         &::before,
         &::after {
@@ -43,11 +45,11 @@
             background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
         }
 
-        &::before{
-            top: 0;
+        &::before {
+            top: 5px;
         }
 
-        &::after{
+        &::after {
             bottom: 0;
         }
     }
@@ -57,9 +59,22 @@
         text-align: right;
     }
 
-    &__date, 
+    &__date,
     &__time {
         margin: 0 0 11px;
+        font-family: @font3;
+        text-transform: uppercase;
+    }
+
+    &__date {
+        display: block;
+    }
+
+    &__time {
+        padding-top: 7px;
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 700;
     }
 
     &__place,
@@ -69,11 +84,9 @@
 
     &__picture {
         position: relative;
-        display: block;
-        width: 497px;
-        height: 532px;
-        margin-left: 58px;
-        margin-right: 65px;
+        max-width: 497px;
+        width: 100%;
+        min-height: 532px;
         overflow: hidden;
 
         &::after {
@@ -95,7 +108,6 @@
     }
 
     &__right {
-        margin-right: auto;
 
         &::before,
         &::after {
@@ -104,14 +116,14 @@
             left: 0;
             width: 139px;
             height: 1px;
-            background: linear-gradient(90deg,#1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%,);
+            background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%, );
         }
 
-        &::before{
-            top: 0;
+        &::before {
+            top: 5px;
         }
 
-        &::after{
+        &::after {
             bottom: 0;
         }
     }

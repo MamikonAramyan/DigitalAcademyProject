@@ -1,36 +1,35 @@
 .social {
-    position: absolute;
-    top: 0;
-    left: calc(50% - 80px);
     display: flex;
 
-    &__instagram,
-    &__vk {
-        position: relative;
-        display: block;
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 58px;
         height: 58px;
         border-radius: 50%;
         background-color: @black;
+        transition: background-color 0.2s;
 
         &:hover {
+            @media (hover: hover) {
+                background-color: @red_dark;
+                cursor: pointer;
+            }
+        }
+
+        &:active {
             background-color: @red_dark;
+            cursor: pointer;
+        }
+
+        &+.social__link {
+            margin-left: 44px;
         }
     }
-
-    &__instagram {
-        margin-right: 44px;
-    }
-        
-    &__instagram-icon,
-    &__vk-icon {
-        position: absolute;
-        top: 17px;
-        left: 17px;
-        z-index: 10;
+    &__link-icon {
         display: block;
-        width: 24px;
-        height: 24px;
+        color: @white;
         fill: @white;
     }
 }

@@ -32,7 +32,7 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 60px 0 100px 0;
+    padding: 60px 0 58px 0;
   }
 
   &__nav {
@@ -63,13 +63,20 @@
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
+    transition: color 0.2s;
 
     &:last-child {
       margin-bottom: 0;
     }
 
     &:hover {
-      color: @red_dark;
+      @media (hover: hover) {
+        color: @red_dark;
+      }
+    }
+
+    &:active {
+        color: @red_dark;
     }
   }
 
@@ -87,7 +94,13 @@
     flex-direction: column;
   }
 
-  &__copyright{
+  &__social {
+    position: absolute;
+    top: 3px;
+    left: calc(50% - 80px);
+  }
+
+  &__copyright {
     margin-bottom: 20px;
   }
 
@@ -97,6 +110,8 @@
 
   &__terms {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
   }
 
   &__privacy,
@@ -108,15 +123,69 @@
 
   &__privacy {
     margin-right: 60px;
+    transition: color 0.2s;
+
+    &:hover {
+      @media (hover: hover) {
+        color: @red_dark;
+      }
+    }
+
+    &:active {
+      color: @red_dark;
+    }
+  }
+
+  &__cookies {
+    transition: color 0.2s;
+
+    &:hover {
+      @media (hover: hover) {
+        color: @red_dark;
+      }
+    }
+
+    &:active {
+      color: @red_dark;
+    }
   }
 
   &__logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+
+    &:active {
+      cursor: pointer;
+    }
   }
 
   &__logo-text {
     margin-right: 15px;
     line-height: 1.5rem;
+    transition: color 0.2s;
+
+    &:hover {
+      @media (hover: hover) {
+        color: @red_dark;
+      }
+    }
+
+    &:active {
+      color: @red_dark;
+    }
   }
+
+  &__logo-icon {
+    position: relative;
+    top: 2px;
+    fill: @black;
+  }
+
 }

@@ -1,0 +1,23 @@
+.breadcrumbs {
+    .container();
+    padding-top: 40px;
+
+    &__item {
+        position: relative;
+        text-decoration: none;
+
+        &--last {
+            pointer-events: none;
+        }
+
+        &+.breadcrumbs__item {
+            margin-left: 14px;
+    
+            &::before {
+                content: "/";
+                position: absolute;
+                left: -11px;
+            }
+        }
+    }
+}

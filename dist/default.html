@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.min.css">
   <title>Учебный проект Tagree Lenni Art</title>
 </head>
 
@@ -17,7 +17,7 @@
     <div class="page-header__container">
       <a href="./index.html" class="page-header__logo">
         <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+          <use xlink:href="assets/icons/symbols.svg#logo" />
         </svg>
       </a>
       <nav class="page-header__nav">
@@ -25,9 +25,27 @@
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
       <div class="page-header__right-block">
-        <a href="#" class="btn page-header__user-btn">Войти</a>
+        <a href="#" class="page-header__user-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
   </header>
@@ -71,7 +89,7 @@
     </article>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer @@class">
     <div class="page-footer__container">
       <div class="page-footer__main">
         <nav class="page-footer__nav">
@@ -85,7 +103,7 @@
           <h5 class="subscription__title">Подпишись и будь в курсе происходящего</h5>
           <div class="subscription__container">
             <input type="email" class="subscription__email" placeholder="Email">
-            <button type="submit" class="subscription__btn btn subscription__btn--w135">Подписаться</button>
+            <button type="submit" class="subscription__btn btn subscription__btn--w135" type="submit">Подписаться</button>
           </div>
           <label class="subscription__agree check">
             <input type="checkbox" class="check__input">
@@ -97,7 +115,7 @@
       <div class="page-footer__bottom-block">
         <div class="page-footer__left-block">
           <div class="page-footer__copyright">
-            © <a href="#" class="page-footer__copyright-link">Millennials</a> 2022
+            © <a href="#" class="page-footer__copyright-link" rel="nofollow" target="_blank">Millennials</a> 2022
           </div>
           <div class="page-footer__terms">
             <a href="#" class="page-footer__privacy">Политика конфиденциальности</a>
@@ -105,23 +123,23 @@
           </div>
         </div>
         <div class="page-footer__social social">
-          <a class="social__instagram">
-            <svg class="social__instagram-icon" width="24" height="24">
+          <a href="#" class="social__link" rel="nofollow" class="social__link">
+            <svg class="social__link-icon" width="21" height="24" rel="nofollow" target="_blank">
               <use xlink:href="assets/icons/symbols.svg#instagram"></use>
             </svg>
           </a>
-          <a class="social__vk">
-            <svg class="social__vk-icon" width="24" height="24">
+          <a href="#" class="social__link" rel="nofollow" target="_blank">
+            <svg class="social__link-icon" width="28" height="29">
               <use xlink:href="assets/icons/symbols.svg#vk"></use>
             </svg>
           </a>
         </div>
-        <div class="page-footer__logo">
+        <a href="#" class="page-footer__logo" rel="nofollow" target="_blank">
           <span class="page-footer__logo-text">Создание и продвижение</span>
           <svg class="page-footer__logo-icon" width="56" height="17">
             <use xlink:href="assets/icons/symbols.svg#tagree"></use>
           </svg>
-        </div>
+        </a>
       </div>
     </div>
   </footer>

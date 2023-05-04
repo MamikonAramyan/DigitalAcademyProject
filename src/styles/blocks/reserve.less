@@ -1,7 +1,7 @@
 .reserve {
   box-sizing: border-box;
   display: grid;
-  gap: 65px 11%;
+  gap: 65px 11.1%;
   grid-template-columns: 405px calc(89% - 405px);
   grid-template-areas:
     "checks scheme"
@@ -12,6 +12,28 @@
   padding-left: 40px;
   padding-right: 40px;
 
+  @media @bw1340 {
+    gap: 65px 6.5%;
+    grid-template-columns: 340px calc(93.5% - 340px);
+  }
+
+  @media @bw1020 {
+    gap: 60px;
+    grid-template-columns: auto 390px;
+    grid-template-areas: 
+      "scheme scheme"
+      "checks legend"
+      "checks order"; 
+  }
+
+  @media @bw768 {
+    grid-template-columns: 100%;
+    grid-template-areas: 
+      "scheme"
+      "legend"
+      "checks"
+      "order"; 
+  }
 
   &__checks {
     grid-area: checks;
@@ -25,26 +47,40 @@
 
   &__scheme {
     grid-area: scheme;
+  }
 
-    &-wrapper {
-      position: relative;
+  &__scheme-title {
+    box-sizing: border-box;
+    max-width: 162px;
+    width: 100%;
+    min-height: 34px;
+    margin: 0 auto 41px;
+    padding: 6px 47px;
+    background-color: @black;
+    font-family: @font1;
+    font-weight: 600;
+    color: @white;
+    text-align: center;
+  }
+
+  &__scheme-wrapper {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: "";
+      display: block;
       width: 100%;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 51.15384%;
-      }
+      padding-top: 51.15384%;
     }
+  }
 
-    &__scene {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+  &__scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   &__legend {
@@ -59,17 +95,24 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 15px;
+  }
+
+  &__tickets+.reserve__tickets {
+    margin-bottom: 25px;
   }
 
   &__qty {
-    margin-bottom: 18px;
-
     &::after {
       content: ""attr(data-caption) " | "attr(data-price);
     }
   }
 
   &__sum {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.38;
+
     &::after {
       content: attr(data-currency);
       margin-left: 4px;
@@ -79,23 +122,32 @@
 
   &__total {
     margin-bottom: 53px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 600;
     text-align: center;
-    font-weight: 700;
 
     &::before {
       content: attr(data-caption);
-      margin-right: 30px;
+      margin-right: 33px;
     }
 
     &::after {
       content: attr(data-currency);
       margin-left: 4px;
-      font-size: 0.95em;
+      font-size: 0.95rem;
     }
   }
 
   &__section-title {
+    margin: 0 0 28px;
     font-family: @font1;
+    font-size: 1.125rem;
+    line-height: 1.4;
+
+    &--mb {
+      margin-bottom: 21px;
+    }
   }
 
   &__submit {
@@ -107,10 +159,32 @@
     display: flex;
     justify-content: right;
     align-items: baseline;
+    margin-bottom: 15px;
+  }
+
+  &__legends+.reserve__legends {
+    margin-bottom: 37px;
   }
 
   &__price {
-    margin-bottom: 18px;
+    position: relative;
+    font-size: 0.875rem;
+    line-height: 1.7;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 138px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-color: @red;
+    }
+
+    &--black::before {
+      background-color: @black;
+    }
 
     &::after {
       content: ""attr(data-price) " "attr(data-currency) " | "attr(data-person);
@@ -122,6 +196,38 @@
   }
 
   &__notes {
+    position: relative;
     font-size: 0.875em;
+    line-height: 1.7;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    &::before {
+      right: 150px;
+      border: 1px solid @black;
+    }
+
+    &::after {
+      right: 137px;
+      border: 1px solid @red;
+    }
+
+    &--booked::before {
+      display: none;
+    }
+
+    &--booked::after {
+      border: 1px solid @gray_dark;
+      background-color: @gray_dark;
+    }
   }
 }
