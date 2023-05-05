@@ -4864,9 +4864,9 @@ button.swiper-pagination-bullet {
 .page-header__nav-toggle::before,
 .page-header__nav-toggle::after {
   content: "";
-  display: block;
   position: absolute;
   left: 11px;
+  display: block;
   width: 18px;
   height: 2px;
   border-radius: 2px;
@@ -5844,6 +5844,11 @@ button.swiper-pagination-bullet {
     margin-bottom: 35px;
     padding: 80px 0 58px;
   }
+  .home__events::before {
+    background: url("../../assets/images/events/events-background-1340w.svg") no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+  }
   .home__events .event-card__title {
     min-height: 55px;
     font-size: 1rem;
@@ -6259,8 +6264,8 @@ button.swiper-pagination-bullet {
     margin: auto;
   }
   .page-header__nav-toggle {
-    display: block;
     position: relative;
+    display: block;
     right: -11px;
     margin-left: 20px;
     width: 43px;
@@ -7027,6 +7032,11 @@ button.swiper-pagination-bullet {
   .home__events {
     margin-bottom: 41px;
     padding: 38px 0 54px;
+  }
+  .home__events::before {
+    background: url("../../assets/images/events/events-background-768w.svg") no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
   }
   .home__events .listing__event-card {
     margin-bottom: 60px;
