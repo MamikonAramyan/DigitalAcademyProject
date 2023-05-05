@@ -1,7 +1,5 @@
 .info {
     .container();
-    // display: flex;
-    // flex-direction: column;
 
     &__cards-listing {
         display: flex;
@@ -30,21 +28,21 @@
         }
 
         @media @bw768 {
-            margin: 0 0 40px;
+            margin: 0 0 41px;
         }
 
         &:last-child .contact-point__text {
             @media @bw1340 {
                 padding: 0 9px;
             }
-            
+
         }
 
         .contact-point__image {
             margin: 0 auto 40px auto;
 
             @media @bw768 {
-                margin-bottom: 31px;
+                margin-bottom: 30px;
             }
         }
 
@@ -72,10 +70,12 @@
         margin-top: 0;
 
         @media @bw1340 {
+            margin-bottom: 1px;
             font-size: 0.875rem;
         }
 
         @media @bw768 {
+            margin-bottom: 0;
             padding: 0 28px;
             font-size: 0.8125rem;
             line-height: 1.38;

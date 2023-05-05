@@ -1,8 +1,9 @@
 <section class="listing @@class">
     <div class="listing__container">
         <h2 class="listing__title section-title">Мероприятия</h2>
-        @@include('events-list.html')
-        <div class="listing__nav events-navigation">
+        <!-- @@include('events-list.html') -->
+        @@include('swiper.html', {"class": "listing__events-list"})
+        <!-- <div class="listing__nav events-navigation">
             <div class="events-navigation__arrow">
                 <button class="events-navigation__left arrow">
                     <svg class="arrow__icon" width="90" height="61">
@@ -24,6 +25,6 @@
             </div>
     
             <a href="#" class="events-navigation__link">Смотреть все</a>
-        </div>
+        </div> -->
     </div>
 </section>

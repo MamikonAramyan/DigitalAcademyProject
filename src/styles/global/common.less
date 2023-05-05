@@ -8,7 +8,7 @@ body {
 // Стили для разработки, удалить после готовности проекта
 * {
     box-sizing: border-box;
-    outline: 1px solid red;
+    // outline: 1px solid red;
 }
 
 .body {
@@ -19,7 +19,6 @@ body {
     padding-top: 147px;
     overflow-x: hidden;
     background-color: @gray;
-
     // background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
     background-image: url(../assets/images/noise.png);
     background-position: 0 0, 0 0;
@@ -35,10 +34,16 @@ body {
 
     @media @bw1660 {
       padding-top: 111px;
+      background-image: url(../assets/images/noise-1340w.png);
+    }
+
+    @media @bw1340 {
+      background-image: url(../assets/images/noise-768w.png);
     }
 
     @media @bw768 {
       padding-top: 70px;
+      background-image: url(../assets/images/noise-320w.png);
       font-size: 0.875rem;
       line-height: 1.357;
     }
@@ -81,7 +86,17 @@ textarea:focus {
   }
 }
 
-//убрать после проверки на верстку, в макете ошибка
-// .event-card__description:nth-child(3) {
-//   margin-right: -10px;
-// }
+label.error,
+span.error {
+    display: block;
+    margin: 5px 0 0;
+    color: @red;
+}
+
+#agree-error, #js-subscribeEmail-error {
+  order: 3;
+
+  @media @bw768 {
+    font-size: .8125rem;
+  }
+}

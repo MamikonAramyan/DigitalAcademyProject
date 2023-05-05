@@ -1,7 +1,5 @@
 .event-card {
     display: flex;
-    // width: 100%;
-    // max-width: 404px;
     width: 405px;
     max-width: 100%;
     min-width: 280px;
@@ -60,13 +58,6 @@
         }
     }
 
-    // &__picture::after {
-    //     content: "";
-    //     display: block;
-    //     width: 100%;
-    //     padding-top: 107.16%;
-    // }
-
     &__img {
         position: absolute;
         top: 0;
@@ -99,21 +90,16 @@
         }
 
         @media @bw768 {
-            min-height: 50px; // по макету 50
+            min-height: 50px;
             margin: 0 0 10px;
             font-size: @font1_size;
             line-height: 1.375;
-            // letter-spacing: -0.4px;
         }
     }
 
     &__description {
         margin: 0 0 auto;
         font-size: @font1_size;
-
-        // @media @bw1660 {
-        //     margin-right: -20px;
-        // }
 
         @media @bw768 {
             font-size: 0.875rem;

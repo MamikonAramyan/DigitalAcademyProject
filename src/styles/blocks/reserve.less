@@ -54,6 +54,10 @@
 
   &__order {
     grid-area: order;
+
+    @media @bw768 {
+      text-align: center;
+    }
   }
 
   &__scheme {
@@ -121,15 +125,15 @@
     }
 
     @media @bw1340 {
-        .reserve__section-title--mb:first-child {
-          padding-top: 9px;
+      .reserve__section-title--mb:first-child {
+        padding-top: 9px;
       }
     }
 
     @media @bw768 {
       .reserve__section-title--mb:first-child {
         padding-top: 0;
-    }
+      }
     }
   }
 
@@ -162,7 +166,7 @@
 
   &__qty {
     &::after {
-      content: ""attr(data-caption) " | "attr(data-price) " " attr(data-currency);
+      content: ""attr(data-caption) " | "attr(data-price) " "attr(data-currency);
     }
   }
 
@@ -240,6 +244,7 @@
     }
 
     @media @bw768 {
+      text-align: left;
       line-height: 1.375;
     }
 
@@ -266,6 +271,10 @@
   &__submit {
     width: 100%;
     color: @white;
+
+    @media @bw768 {
+      max-width: 388px;
+    }
   }
 
   &__legends {
