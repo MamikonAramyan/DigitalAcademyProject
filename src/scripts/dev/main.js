@@ -50,7 +50,7 @@
       updateOnWindowResize: true,
       slidesPerView: "auto",
       freeMode: true,
-      spaceBetween: 0,
+      spaceBetween: 60,
       speed: 500,
       grabCursor: true,
       pagination: {
@@ -61,6 +61,32 @@
         nextEl: ".swiper-arrow-next",
         prevEl: ".swiper-arrow-prev",
         disabledClass: "arrow--disabled"
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        620: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        962: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1340: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1660: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+        }
       }
     });
   });

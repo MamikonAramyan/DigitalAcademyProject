@@ -75,7 +75,6 @@
         line-height: 1.37;
         text-decoration: none;
         letter-spacing: 0.1px;
-        cursor: pointer;
         transition: color 0.2s;
 
         @media @bw1340 {
@@ -95,6 +94,10 @@
 
         &:active {
             color: @red_dark;
+        }
+
+        &[href] {
+            cursor: pointer;
         }
 
         &+.contact-point__text {

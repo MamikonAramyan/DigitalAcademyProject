@@ -26,9 +26,15 @@
     box-sizing: border-box;
     .container;
     margin-bottom: 80px;
+    padding-right: 32%;
 
     @media @bw1340 {
       margin-bottom: 54px;
+      padding-right: 25%;
+    }
+
+    @media @bw1020 {
+      padding-right: 15%;
     }
 
     @media @bw768 {
@@ -36,16 +42,16 @@
     }
   }
 
-  &__content-container {
-    max-width: 870px;
-    margin-right: auto;
+  // &__content-container {
+  //   max-width: 870px;
+  //   margin-right: auto;
 
-    @media @bw1660 {
-      max-width: 831px;
-    }
+  //   @media @bw1660 {
+  //     max-width: 831px;
+  //   }
 
-    @media @bw1340 {
-      max-width: 600px;
-    }
-  }
+  //   @media @bw1340 {
+  //     max-width: 600px;
+  //   }
+  // }
 }

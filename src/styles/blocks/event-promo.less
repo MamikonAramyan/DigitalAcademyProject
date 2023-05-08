@@ -31,24 +31,21 @@
     }
 
     &__info-block {
-        display: grid;
-        grid-template-columns: 1fr 497px 1fr;
-        gap: 60px;
+        display: flex;
+        justify-content: center;
+        padding-left: 32px;
 
         @media @bw1660 {
-            grid-template-columns: 1fr 462px 1fr;
-            gap: 0;
+            padding-left: 64px;
         }
 
-        @media @bw1020 {
-            grid-template-columns: 1fr 268px 1fr;
+        @media @bw1340 {
+            padding-left: 26px;
         }
 
         @media @bw768 {
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas:
-                "picture picture"
-                "left right";
+            flex-wrap: wrap;
+            padding-left: 0;
         }
     }
 
@@ -70,17 +67,8 @@
     }
 
     &__left {
-        @media @bw1660 {
-            margin-right: 14px;
-        }
-
-        @media @bw1020 {
-            margin-right: 18px;
-        }
-
         @media @bw768 {
-            grid-area: left;
-            margin-right: 12px;
+            order: 2;
         }
 
         &::before,
@@ -151,24 +139,23 @@
         position: relative;
         max-width: 497px;
         width: 100%;
-        min-height: 532px;
+        margin: 0 60px;
         overflow: hidden;
 
         @media @bw1660 {
             max-width: 426px;
-            min-height: 456px;
-            margin-left: 37px;
+            margin: 0 50px;
         }
 
-        @media @bw1020 {
+        @media @bw1340 {
             max-width: 245px;
-            min-height: 262px;
-            margin-left: 23px;
+            margin: 0 19px 0 41px;
         }
 
         @media @bw768 {
-            grid-area: picture;
-            margin: 0 auto;
+            order: 1;
+            max-width: 100%;
+            margin: 0 19px;
         }
 
         &::after {
@@ -190,17 +177,9 @@
     }
 
     &__right {
-        @media @bw1660 {
-            margin-left: 50px;
-        }
-
-        @media @bw1020 {
-            margin-left: 19px;
-        }
-
         @media @bw768 {
-            grid-area: right;
-            margin-left: 7px;
+            order: 3;
+            margin-left: 7%;
         }
 
         &::before,
